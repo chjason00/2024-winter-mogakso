@@ -1,0 +1,32 @@
+# Python 관련 파일
+*.pyc
+*.pyo
+__pycache__/
+*.sqlite3
+
+# 환경 설정 파일
+.env
+*.log
+
+# 운영 체제 및 에디터 관련 파일
+.DS_Store
+.idea/
+.vscode/
+
+# 가상환경 디렉토리
+venv/
+env/
+
+# Static 및 Media 파일 (운영환경에서 관리)
+staticfiles/
+media/
+
+# 배포 관련 파일
+*.pid
+*.pyproj
+*.egg-info/
+dist/
+build/
+
+# Git 관련 파일
+*.swp

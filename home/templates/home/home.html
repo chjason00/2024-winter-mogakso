@@ -1,0 +1,15 @@
+<!-- templates/main/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - 가계부</title>
+</head>
+<body>
+    <h1>Welcome to 가계부</h1>
+    <nav>
+        <a href="{% url 'user:login' %}">Login</a> |
+        <a href="{% url 'transaction:list' %}">Transactions</a> |
+        <a href="{% url 'report:overview' %}">Reports</a>
+    </nav>
+</body>
+</html>
