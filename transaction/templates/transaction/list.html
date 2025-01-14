@@ -5,12 +5,18 @@
     <title>Transactions</title>
 </head>
 <body>
+
+    <a href="{% url 'transaction:add' %}">
+        <button type="button">거래 추가</button>
+    </a>
+
+
     <h1>Your Transactions</h1>
     <ul>
         {% for transaction in transactions %}
             <li>{{ transaction.date }}: {{ transaction.title }} - {{ transaction.amount }}</li>
         {% empty %}
-            <li>No transactions yet.</li>
+            <li>거래 내역이 없습니다.</li>
         {% endfor %}
     </ul>
 </body>
