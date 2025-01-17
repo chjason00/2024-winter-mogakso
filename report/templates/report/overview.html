@@ -1,11 +1,10 @@
 <!-- templates/report/overview.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Report</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}리포트{% endblock %}
+
+{% block content %}
     <h1>Report Overview</h1>
     <p>Total Spending: {{ total }}</p>
-</body>
-</html>
+    <img src="/static/graphs/transaction_report.png" alt="Transaction Graph">
+{% endblock %}

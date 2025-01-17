@@ -1,0 +1,15 @@
+<!-- templates/transaction/delete_transaction.html -->
+{% extends 'base.html' %}
+
+{% block title %}거래 삭제{% endblock %}
+
+{% block content %}
+    <h1>게시글 삭제</h1>
+    <p>정말로 "{{ transaction.title }}" 내역을 삭제하시겠습니까?</p>
+    <p>{{ transaction.memo }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">삭제</button>
+        <a href="{% url 'transaction:list' %}">취소</a>
+    </form>
+{% endblock %}

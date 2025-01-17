@@ -1,15 +1,13 @@
 <!-- templates/user/register.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Register</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}회원 가입{% endblock %}
+
+{% block content %}
     <h1>Register</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Register</button>
     </form>
-</body>
-</html>
+{% endblock %}

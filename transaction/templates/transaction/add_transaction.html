@@ -1,10 +1,9 @@
 <!-- templates/transaction/add_transaction.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>거래 추가</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}거래 추가{% endblock %}
+
+{% block content %}
     <h1>거래 내역 추가</h1>
     <form method="post">
         {% csrf_token %}
@@ -18,5 +17,4 @@
     {% endif %}
         <button type="submit">추가</button>
     </form>
-</body>
-</html>
+{% endblock %}
