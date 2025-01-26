@@ -12,14 +12,14 @@
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 8px 16px;
     cursor: pointer;
     font-size: 16px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">거래 추가</button>
     </a>
     <div class="container my-4">
     <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
-        <thead style="background-color: lightsteelblue;">
+        <thead style="background-color: lightsteelblue; padding : 5px; border: 1px solid black;">
             <tr>
                 <th>#</th>
                 <th>날짜</th>
@@ -37,7 +37,15 @@
                     <td>{{ transaction.amount }}</td>
                     <td>
                         <a href="{% url 'transaction:delete' transaction.pk %}">
-                            <button type="button">삭제</button>
+                            <button type="button" style="
+                                background-color: #007bff;
+                                color: white;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 6px 12px;
+                                cursor: pointer;
+                                font-size: 14px;
+                                box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">삭제</button>
                         </a>
                     </td>
                 </tr>
