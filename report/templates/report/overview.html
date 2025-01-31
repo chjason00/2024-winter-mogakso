@@ -6,5 +6,9 @@
 {% block content %}
     <h1>Report Overview</h1>
     <p>Total Spending: {{ total }}</p>
-    <img src="/static/graphs/transaction_report.png" alt="Transaction Graph">
+    {% if graph_path %}
+        <img src="{{ graph_path }}" alt="Transaction Graph">
+    {% else %}
+        <p>No transaction data available.</p>
+    {% endif %}
 {% endblock %}

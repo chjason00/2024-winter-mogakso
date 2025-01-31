@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'user',
     'transaction',
     'report',
+    # 'portfolio',
 ]
 
 MIDDLEWARE = [
@@ -126,11 +127,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = '/static/'
+
+# 개발 환경에서는 STATICFILES_DIRS를 사용
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, 'static'),
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# 배포 환경에서는 collectstatic을 사용
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
