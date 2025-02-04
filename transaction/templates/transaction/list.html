@@ -36,6 +36,19 @@
                     <td>{{ transaction.title }}</td>
                     <td>{{ transaction.amount }}</td>
                     <td>
+                        <a href="{% url 'transaction:detail' transaction.pk %}">
+                            <button type="button" style="
+                                background-color: #007bff;
+                                color: white;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 6px 12px;
+                                cursor: pointer;
+                                font-size: 14px;
+                                box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">상세보기</button>
+                        </a>
+                    </td>
+                    <td>
                         <a href="{% url 'transaction:delete' transaction.pk %}">
                             <button type="button" style="
                                 background-color: #007bff;

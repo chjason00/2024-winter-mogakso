@@ -30,6 +30,22 @@ def add(request):
     return render(request, 'transaction/add_transaction.html', {'form' : form})
 
 @login_required
+def detail(request, pk):
+    transaction = get_object_or_404(Transaction, pk=pk)
+
+    if request.method == "POST":
+        form = TransactionForm(request.POST, instance=transaction)
+        if form.is_valid():
+            form.save()
+    else:
+        form = TransactionForm(instance=transaction)
+
+    return render(request, "transaction/detail_transaction.html", {
+        "transaction": transaction,
+        "form": form,
+    })
+
+@login_required
 def delete(request, pk):
     item = get_object_or_404(Transaction, pk=pk)
     if request.method == 'POST':

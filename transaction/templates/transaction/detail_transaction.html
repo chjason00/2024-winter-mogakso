@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}거래 상세{% endblock %}
+
+{% block content %}
+    <h1>거래 내역</h1>
+    <p>메모: {{ transaction.memo }}</p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">수정</button>
+    </form>
+
+{% endblock %}

@@ -24,4 +24,5 @@ urlpatterns = [
     path('user/', include('user.urls')),  # User 관련 기능
     path('transaction/', include('transaction.urls')),  # 거래 내역
     path('report/', include('report.urls')),  # 리포트
+    path('asset/', include('asset.urls')),  # 자산
 ]
